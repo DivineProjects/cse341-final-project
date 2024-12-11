@@ -1,13 +1,22 @@
-const Student = require('../models/studentModel');
+// const Student = require('../models/studentModel');
+const { response } = require("express");
+const mongodb = require("../data/database");
+const ObjectId = require("mongodb").ObjectId;
+
 
 // Get all students
 exports.getStudents = async (req, res) => {
   try {
-    const students = await Student.find();
-    res.status(200).json(students);
+    const db = mongodb.getDatabase();
+    const result = await db.collection("student").find();
+    result.toArray().then((students) => {
+      res.setHeader("Content-Type", "application/json");
+      res.status(200).json(students);
+    });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
+  
 };
 
 // Create a new student

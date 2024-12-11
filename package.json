@@ -14,6 +14,19 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.8.4",
-    "swagger-autogen": "^2.23.7"
-  }
+    "swagger-autogen": "^2.23.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivineProjects/cse341-final-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DivineProjects/cse341-final-project/issues"
+  },
+  "homepage": "https://github.com/DivineProjects/cse341-final-project#readme"
 }
