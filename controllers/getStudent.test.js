@@ -1,5 +1,5 @@
-const { getSingle } = require('./students'); // Path to your controller
-const mongodb = require('../data/database'); // Mocked database connection
+const { getSingle } = require('./students');
+const mongodb = require('../data/database');
 const { ObjectId } = require('mongodb');
 
 // Mock student data
@@ -18,7 +18,6 @@ describe("getSingle Student Controller", () => {
     let req, res, collectionMock;
 
     beforeEach(() => {
-        // Initialize mock req and res
         req = { params: { id: mockStudent._id.toString() } };
         res = {
             setHeader: jest.fn(),
@@ -26,7 +25,6 @@ describe("getSingle Student Controller", () => {
             json: jest.fn(),
         };
 
-        // Mock MongoDB collection and database methods
         collectionMock = {
             find: jest.fn().mockReturnValue({
                 toArray: jest.fn().mockResolvedValue([mockStudent]),

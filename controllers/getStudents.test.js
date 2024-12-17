@@ -2,7 +2,6 @@ const { getAll } = require('./students');
 const mongodb = require('../data/database'); 
 const { ObjectId } = require('mongodb');
 
-// Mock MongoDB collection for 'student'
 const mockStudents = [
     {
         _id: new ObjectId(),
@@ -43,7 +42,6 @@ describe("getAll Students Controller", () => {
     let req, res;
 
     beforeEach(() => {
-        // Mock req and res objects
         req = {};
         res = {
             setHeader: jest.fn(),
@@ -51,7 +49,6 @@ describe("getAll Students Controller", () => {
             json: jest.fn(),
         };
 
-        // Mock MongoDB getDatabase().collection('student').find()
         const collectionMock = {
             find: jest.fn().mockReturnValue({
                 toArray: jest.fn().mockResolvedValue(mockStudents),
