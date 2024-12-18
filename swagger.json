@@ -255,9 +255,12 @@
           "204": {
             "description": "No Content"
           },
+<<<<<<< HEAD
           "412": {
             "description": "Precondition Failed"
           },
+=======
+>>>>>>> mark-branch
           "500": {
             "description": "Internal Server Error"
           }
@@ -345,9 +348,12 @@
           "400": {
             "description": "Bad Request"
           },
+<<<<<<< HEAD
           "412": {
             "description": "Precondition Failed"
           },
+=======
+>>>>>>> mark-branch
           "500": {
             "description": "Internal Server Error"
           }

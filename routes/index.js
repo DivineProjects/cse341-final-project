@@ -1,6 +1,7 @@
 const express = require("express")
 const router = new express.Router();
 const students = require('./students');
+const classes = require("./class")
 const swaggerRoute = require('./swagger');
 const classRouter = require('./class')
 
@@ -12,6 +13,10 @@ router.get('/', (req, res) => {
 });
 
 router.use('/students', students);
+<<<<<<< HEAD
 router.use('/classes', classRouter);
+=======
+router.use('/classes', classes);
+>>>>>>> mark-branch
 
 module.exports = router;
