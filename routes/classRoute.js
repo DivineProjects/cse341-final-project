@@ -1,6 +1,6 @@
 const express = require("express")
 const router = new express.Router();
-const classController = require('../controllers/classes');
+const classController = require('../controllers/classesController');
 const validate = require('../middleware/validation-middleware');
 
 router.get("/", classController.getAll);

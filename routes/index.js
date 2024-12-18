@@ -1,8 +1,10 @@
 const express = require("express")
 const router = new express.Router();
-const students = require('./students');
+const studentRouter = require('./studentRoute');
 const swaggerRoute = require('./swagger');
-const classRouter = require('./class')
+const classRouter = require('./classRoute');
+const clubRouter = require('./clubsRoute');
+const gradeRouter = require('./gradeRoute');
 
 router.use('/', swaggerRoute);
 
@@ -11,7 +13,9 @@ router.get('/', (req, res) => {
     res.send('Welcome to Student Webservices');
 });
 
-router.use('/students', students);
+router.use('/students', studentRouter);
 router.use('/classes', classRouter);
+router.use('/clubs', clubRouter);
+router.use('/grades', gradeRouter);
 
 module.exports = router;

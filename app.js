@@ -18,8 +18,8 @@ const gradeRoutes = require('./routes/gradeRoutes');
 //const GithubUser = require('./models/githubUserModel');
 
 // Load environment variables
-dotenv.config({ path: './config.env' });
-
+// dotenv.config({ path: './config.env' });                               
+dotenv.config(); // Load environment variables from .env file 
 // Initialize the app
 const app = express();
 
@@ -55,7 +55,7 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: process.env.CALLBACK_URL,
+      callbackURL: process.env.CALLBACK_URL
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
@@ -93,9 +93,9 @@ app.use('/api/students', studentRoutes);
 app.use('/api/classes', classRoutes);
 app.use('/api/exams', examRoutes);
 app.use('/api/grades', gradeRoutes);
-app.use('/api/users', userRoutes);
-app.use('/', viewRouter);
-app.use('/', swaggerRouter);
+// app.use('/api/users', userRoutes);
+// app.use('/', viewRouter);
+// app.use('/', swaggerRouter);
 
 // Error Handling Middleware
 // eslint-disable-next-line no-unused-vars
