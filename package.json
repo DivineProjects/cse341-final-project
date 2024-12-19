@@ -4,7 +4,7 @@
   "description": "https://cse341-final-project-xtu9.onrender.com",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js",
     "swagger": "node swagger.js",
     "dev": "nodemon server.js"
@@ -29,6 +29,7 @@
     "validatorjs": "^3.22.1"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.7"
   }
 }
