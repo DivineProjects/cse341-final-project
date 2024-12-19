@@ -28,9 +28,10 @@ const saveClass = async (req, res, next) => {
     const validationRule = {
         "classId": "required|string",
         "name": "required|string", 
+        "email": "required|string|email",
         "teacher": "required|string", 
         "schedule" : "required|string", 
-        "room": "required|string", 
+        "room": "required|integer", 
         "capacity": "required|integer",
     };
 
