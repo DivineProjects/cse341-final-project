@@ -1,4 +1,4 @@
-const { getSingle } = require('./classes');
+const { getSingle } = require('./classesController');
 const mongodb = require('../data/database');
 
 describe("getSingle Class Controller", () => {

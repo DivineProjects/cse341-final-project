@@ -1,4 +1,4 @@
-const { getAll } = require('./students');
+const { getAll } = require('./studentsController');
 const mongodb = require('../data/database'); 
 const { ObjectId } = require('mongodb');
 
