@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "title": "Student REST API",
+    "description": "Students API"
   },
   "host": "cse341-final-project-xtu9.onrender.com",
   "basePath": "/",
@@ -778,9 +778,5 @@
         }
       }
     }
-  },
-  "info": {
-    "title": "CSE 340 Final Project",
-    "description": "Students API"
   }
 }
